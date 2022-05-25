@@ -1,2 +1,2 @@
-### ATM (Bank) Project
+# ATM (Bank) Project
 ## Spring Boot Backend Project for Patika.dev Java Courses.
