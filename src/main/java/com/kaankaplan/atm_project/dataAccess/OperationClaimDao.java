@@ -10,4 +10,7 @@ public interface OperationClaimDao extends JpaRepository<OperationClaim, Integer
 	@Query("From OperationClaim o where o.claimName = :claimName")
 	OperationClaim getClaimByClaimName(String claimName);
 	
+	@Query("From OperationClaim o where o.systemUser.email = :email")
+	OperationClaim getClaimByEmail(String email);
+
 }

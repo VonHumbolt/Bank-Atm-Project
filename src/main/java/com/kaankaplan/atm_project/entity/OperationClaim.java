@@ -31,10 +31,10 @@ public class OperationClaim {
 	
 	@OneToOne(mappedBy = "operationClaim")
 	@JsonIgnore
-	private User user;
+	private SystemUser systemUser;
 	
-	@OneToOne(mappedBy = "operationClaim")
-	@JsonIgnore
-	private Admin admin;
+//	@OneToOne(mappedBy = "operationClaim")
+//	@JsonIgnore
+//	private Admin admin;
 	
 }

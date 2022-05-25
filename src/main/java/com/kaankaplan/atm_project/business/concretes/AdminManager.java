@@ -36,6 +36,7 @@ public class AdminManager implements AdminService {
 		
 		OperationClaim claim = this.operationClaimService.getClaimByClaimName("ADMIN");
 		admin.setOperationClaim(claim);
+		admin.setPassword(passwordEncoder.encode(admin.getPassword()));
 		
 		this.adminDao.save(admin);
 	}
@@ -56,7 +57,7 @@ public class AdminManager implements AdminService {
 		
 		log.info("Admin güncellendi -> ");
 		
-		Admin adminFromDb = this.adminDao.getById(admin.getAdminId());
+		Admin adminFromDb = this.adminDao.getById(admin.getUserId());
 		
 		adminFromDb.setBankName(admin.getBankName());
 		adminFromDb.setEmail(admin.getEmail());

@@ -22,5 +22,10 @@ public class OperationClaimManager implements OperationClaimService {
 		
 		return this.operationClaimDao.getClaimByClaimName(claimName);
 	}
+	
+	@Override
+	public OperationClaim getClaimByEmail(String email) {
+		return this.operationClaimDao.getClaimByEmail(email);
+	}
 
 }

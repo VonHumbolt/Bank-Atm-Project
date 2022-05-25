@@ -30,11 +30,11 @@ import lombok.NoArgsConstructor;
 @Table(name = "users")
 public class User extends SystemUser { // CUSTOMER
 
-	@Id
-	@GeneratedValue(strategy = GenerationType.IDENTITY)
-	@Column(name = "user_id")
-	private int userId;
-	
+//	@Id
+//	@GeneratedValue(strategy = GenerationType.IDENTITY)
+//	@Column(name = "user_id")
+//	private int userId;
+//	
 	@NotBlank
 	@NotEmpty
 	@Column(name = "first_name")
@@ -45,15 +45,15 @@ public class User extends SystemUser { // CUSTOMER
 	@Column(name = "last_name")
 	private String lastName;
 	
-	@Email
-	@Column(name = "email")
-	private String email;
-	
-	@NotBlank
-	@NotEmpty
-	@Size(min = 4)
-	@Column(name = "password")
-	private String password;
+//	@Email
+//	@Column(name = "email")
+//	private String email;
+//	
+//	@NotBlank
+//	@NotEmpty
+//	@Size(min = 4)
+//	@Column(name = "password")
+//	private String password;
 	
 	@Column(name = "account_number")
 	private String acountNumber = getRandomAccountNumber();
@@ -71,9 +71,9 @@ public class User extends SystemUser { // CUSTOMER
 	@JoinColumn(name = "admin_id")
 	private Admin admin;
 	
-	@OneToOne
-	@JoinColumn(name = "claim_id")
-	private OperationClaim operationClaim;
+//	@OneToOne
+//	@JoinColumn(name = "claim_id")
+//	private OperationClaim operationClaim;
 	
 	String getRandomAccountNumber() {
 		Random random = new Random();

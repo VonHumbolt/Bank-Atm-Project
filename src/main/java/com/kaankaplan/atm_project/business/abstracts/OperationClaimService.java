@@ -5,4 +5,6 @@ import com.kaankaplan.atm_project.entity.OperationClaim;
 public interface OperationClaimService {
 	
 	OperationClaim getClaimByClaimName(String claimName);
+	
+	OperationClaim getClaimByEmail(String email);
 }
